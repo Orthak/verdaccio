@@ -1,6 +1,6 @@
 import isString from 'lodash/isString';
 import isObject from 'lodash/isObject';
-export const TIMEFORMAT = 'DD.MM.YYYY';
+export const TIMEFORMAT = 'DD.MM.YYYY, HH:mm:ss';
 import format from 'date-fns/format';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 

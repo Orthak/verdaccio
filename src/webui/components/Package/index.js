@@ -5,7 +5,7 @@
 
 import React from 'react';
 import type { Element } from 'react';
-import { margin } from 'polished';
+import { spacing } from '../../utils/styles/mixings';
 
 import Tag from '../Tag';
 import { formatDate, formatDateDistance } from '../../utils/package';
@@ -29,7 +29,7 @@ const Package = ({ name: label, version, time, author: { name, email, avatar }, 
       <Overview>
         {license && (
           <OverviewItem>
-            <Icon name="license" modifiers={margin('4px', '5px', '0px', '0px')} />
+            <Icon name="license" modifiers={spacing('margin', '4px', '5px', '0px', '0px')} />
             {license}
           </OverviewItem>
         )}
@@ -41,7 +41,7 @@ const Package = ({ name: label, version, time, author: { name, email, avatar }, 
     </Header>
     <Content>
       <Field>
-        <Text text="Author" modifiers={margin('0px', '0px', '5px', '0px')} />
+        <Text text="Author" modifiers={spacing('margin', '0px', '0px', '5px', '0px')} />
         <Author>
           <Avatar alt={name} src={avatar}>
             {!avatar && getInitialsName(name)}
@@ -52,16 +52,14 @@ const Package = ({ name: label, version, time, author: { name, email, avatar }, 
           </Details>
         </Author>
       </Field>
-      {description && (
-        <Field>
-          <Text text="Description" modifiers={margin('0px', '0px', '5px', '0px')} />
-          <span>{description}</span>
-        </Field>
-      )}
+      <Field>
+        <Text text="Description" modifiers={spacing('margin', '0px', '0px', '5px', '0px')} />
+        <span>{description}</span>
+      </Field>
     </Content>
     {keywords.length > 0 && (
       <Footer>
-        {keywords.map((keyword, index) => (
+        {keywords.sort().map((keyword, index) => (
           <Tag key={index}>{keyword}</Tag>
         ))}
       </Footer>

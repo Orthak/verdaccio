@@ -2,9 +2,8 @@
  * @prettier
  * @flow
  */
-import { Styles } from 'polished';
-
 import { Icons } from './index';
+import type { Styles } from '../../../../types';
 
 export interface IIconsMap {
   brazil: string;

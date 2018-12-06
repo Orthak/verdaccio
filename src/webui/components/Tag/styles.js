@@ -4,7 +4,7 @@
  */
 
 import styled from 'react-emotion';
-import { ellipsis } from 'polished';
+import { ellipsis } from '../../utils/styles/mixings';
 
 export const Wrapper = styled.span`
   && {

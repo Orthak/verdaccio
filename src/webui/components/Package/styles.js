@@ -7,9 +7,9 @@ import styled, { css } from 'react-emotion';
 import { Link } from 'react-router-dom';
 import { default as Photo } from '@material-ui/core/Avatar';
 import { default as Ico } from '../Icon';
-import { ellipsis } from 'polished';
 
 import mq from '../../utils/styles/media';
+import { ellipsis } from '../../utils/styles/mixings';
 
 import Label from '../Label';
 

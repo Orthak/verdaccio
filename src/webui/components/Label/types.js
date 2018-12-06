@@ -2,8 +2,7 @@
  * @prettier
  * @flow
  */
-
-import { Styles } from 'polished';
+import type { Styles } from '../../../../types';
 
 export interface IProps {
   text: string;
